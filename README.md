@@ -16,15 +16,7 @@ This project provides SOS alerts, medication reminders, and virtual meeting link
 
 5. [Prerequisites](#prerequisites)
    - [Software Requirements](#software-requirements)
-     - [Node.js and npm](#nodejs-and-npm)
-     - [MongoDB](#mongodb)
-     - [Python](#python)
-     - [Visual Studio Code (VS Code)](#visual-studio-code-vs-code)
-     - [Twilio Account](#twilio-account)
-     - [Google Cloud Console (for Google Meet Link Generation)](#google-cloud-console-for-google-meet-link-generation)
    - [Accounts Setup](#accounts-setup)
-     - [Setting Up Twilio](#setting-up-twilio)
-     - [Setting Up Google API](#setting-up-google-api)
    - [Installing Dependencies](#installing-dependencies)
 
 6. [SSL and IP](#ssl-and-ip)
