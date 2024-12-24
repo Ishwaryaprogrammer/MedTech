@@ -6,6 +6,42 @@ This project provides SOS alerts, medication reminders, and virtual meeting link
 
 ### Table of Contents
 
+### Table of Contents
+
+1. [Key Features](#key-features)
+
+2. [Technologies Used](#technologies-used)
+
+3. [Workflow of the Project](#workflow-of-the-project)
+
+4. [Project Structure](#project-structure)
+
+5. [Prerequisites](#prerequisites)
+   - [Software Requirements](#software-requirements)
+     - [Node.js and npm](#nodejs-and-npm)
+     - [MongoDB](#mongodb)
+     - [Python](#python)
+     - [Visual Studio Code (VS Code)](#visual-studio-code-vs-code)
+     - [Twilio Account](#twilio-account)
+     - [Google Cloud Console (for Google Meet Link Generation)](#google-cloud-console-for-google-meet-link-generation)
+   - [Accounts Setup](#accounts-setup)
+     - [Setting Up Twilio](#setting-up-twilio)
+     - [Setting Up Google API](#setting-up-google-api)
+   - [Installing Dependencies](#installing-dependencies)
+
+6. [SSL and IP](#ssl-and-ip)
+
+7. [Running the Project](#running-the-project)
+
+8. [Screenshots](#screenshots)
+
+9. [Future Scope](#future-scope)
+
+10. [Contact Information](#contact-information)
+
+---
+
+Let me know if you need to make any modifications or additions to the table of contents!
 
 ---
 
