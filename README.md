@@ -6,8 +6,6 @@ This project provides SOS alerts, medication reminders, and virtual meeting link
 
 ### Table of Contents
 
-### Table of Contents
-
 1. [Key Features](#key-features)
 
 2. [Technologies Used](#technologies-used)
@@ -38,10 +36,6 @@ This project provides SOS alerts, medication reminders, and virtual meeting link
 9. [Future Scope](#future-scope)
 
 10. [Contact Information](#contact-information)
-
----
-
-Let me know if you need to make any modifications or additions to the table of contents!
 
 ---
 
