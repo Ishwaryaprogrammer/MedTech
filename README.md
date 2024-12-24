@@ -512,7 +512,9 @@ The project has the potential for future enhancements and additional features. S
 For any questions or support related to this project, feel free to contact us:
 
 Email: [ishwaryasuresh2004 @gmail.com]
-GitHub: [your-github-profile]
+
+GitHub: [[your-github-profile](https://github.com/Ishwaryaprogrammer)]
+
 LinkedIn: [linkedin.com/in/ishwarya-suresh-096a9a246]
 
 Feel free to open an issue or reach out if you encounter any bugs or want to contribute to the project!
