@@ -1,0 +1,9 @@
+
+.env
+credentials.json
+token.json
+google-auth.js
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
