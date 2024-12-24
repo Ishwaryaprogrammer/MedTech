@@ -380,11 +380,11 @@ app.post('/send-meet-link', (req, res) => {
 // Endpoint to send SOS
 app.post("/send-sos", (req, res) => {
   const { message, location } = req.body;
-
+  const userName = req.session.userName;
   // Sending SMS
   client.messages
     .create({
-      body: `${message} Location: ${location}`,
+      body: `I am ${userName}.${message} Location: ${location}`,
       from: twilioPhoneNumber,
       to: req.session.useremergencycontact,
     })
@@ -400,7 +400,7 @@ app.post("/send-sos", (req, res) => {
     .create({
       twiml: `<Response>
       <Say voice="alice" language="en-IN" prosody rate="fast" pitch="x-high">
-        ${message} and the location has been sent to your message.
+        I am ${userName}.${message} and the location has been sent to your message.
       </Say></Response>`,
       to: req.session.useremergencycontact,
       from: twilioPhoneNumber,
