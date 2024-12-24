@@ -496,9 +496,27 @@ These dependencies are needed for the following functionality:
 ---
 ### Screenshots
 
+![Screenshot 2024-12-24 185347](https://github.com/user-attachments/assets/00b90417-3cf9-42b8-8efa-141444d534ea)
+![Screenshot 2024-12-24 185438](https://github.com/user-attachments/assets/691bf139-3943-4709-ac1d-b728a80aa048)
+![Screenshot 2024-12-24 185505](https://github.com/user-attachments/assets/8948dc0e-47f2-4ffb-a697-ac0d7001b811)
+![Screenshot 2024-12-24 185505](https://github.com/user-attachments/assets/a9696242-fed8-46b0-8d45-2072770d8eb8)
+![Screenshot 2024-12-24 185647](https://github.com/user-attachments/assets/e1bc345a-d08b-4f3c-890c-4f768587dee1)
+![Screenshot 2024-12-24 185711](https://github.com/user-attachments/assets/6a9cfbd6-5d48-48db-8bd4-3791c6aa5f93)
+![Screenshot 2024-12-24 185733](https://github.com/user-attachments/assets/0007e6be-be44-43f3-b62f-6991d1996b1a)
+![Screenshot 2024-12-24 185750](https://github.com/user-attachments/assets/3d52d977-fcb2-407d-8cec-571abb44a37b)
+![Screenshot 2024-12-24 190900](https://github.com/user-attachments/assets/e8a8fb2a-6c5c-48ed-8fa9-19d2fce950f1)
+![Screenshot 2024-12-24 185314](https://github.com/user-attachments/assets/bdc74057-0b3b-4b37-ad71-15379a0e8d6d)
+![image](https://github.com/user-attachments/assets/d3026661-cb62-43b1-989b-32e8af9d8fb8)
+![image](https://github.com/user-attachments/assets/5ec460fd-91f3-4ab8-90dd-2fa5ffbd1c52)
+![Screenshot 2024-12-24 190242](https://github.com/user-attachments/assets/903cb312-4974-4af5-b0d2-e073540bd3ed)
+![Screenshot 2024-12-24 190512](https://github.com/user-attachments/assets/a1e842d5-792f-4bf2-8b69-df059827aad6)
+![Screenshot 2024-12-24 185347](https://github.com/user-attachments/assets/1db6053a-8353-4726-ac1b-e3d91e5bd4ca)
+![image](https://github.com/user-attachments/assets/6f6fd9c9-b52e-4a70-9fdf-cacd564472f1)
+![Screenshot 2024-12-24 185933](https://github.com/user-attachments/assets/04d5b9cf-9605-4a6f-b752-01e84bfade8c)
+![Screenshot 2024-12-24 190042](https://github.com/user-attachments/assets/3e904c8a-8973-49a7-b09f-b3dffff68f8d)
+![Screenshot 2024-12-24 190531](https://github.com/user-attachments/assets/7e440c8b-e308-42c0-abb4-baf8bc93c01d)
 
 ---
-
 ### Future Scope
 The project has the potential for future enhancements and additional features. Some possible improvements include:
 
@@ -511,11 +529,11 @@ The project has the potential for future enhancements and additional features. S
 
 For any questions or support related to this project, feel free to contact us:
 
-Email: [ishwaryasuresh2004 @gmail.com]
+Email: ishwaryasuresh2004@gmail.com
 
-GitHub: [[your-github-profile](https://github.com/Ishwaryaprogrammer)]
+GitHub: https://github.com/Ishwaryaprogrammer
 
-LinkedIn: [linkedin.com/in/ishwarya-suresh-096a9a246]
+LinkedIn: linkedin.com/in/ishwarya-suresh-096a9a246
 
 Feel free to open an issue or reach out if you encounter any bugs or want to contribute to the project!
 
