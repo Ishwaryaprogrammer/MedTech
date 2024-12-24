@@ -1,0 +1,553 @@
+# MEDTECH
+
+This project provides SOS alerts, medication reminders, and virtual meeting links to help users stay connected with loved ones. It also offers personalized diet and health recommendations to enhance overall well-being.
+
+### Table of Contents
+
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [About the Project](#about-the-project)
+4. [Detailed Workflow](#detailed-workflow)
+5. [Prerequisites](#prerequisites)
+   - [Software Requirements](#software-requirements)
+   - [Accounts Setup](#accounts-setup)
+6. [Project Structure](#project-structure)
+7. [Usage Instructions](#usage-instructions)
+8. [Configuration](#configuration)
+   - [Setting Up `.env` File](#setting-up-env-file)
+9. [Running the Project](#running-the-project)
+10. [Code Example](#code-example)
+11. [Contributing](#contributing)
+12. [License](#license)
+13. [Future Scope](#future-scope)
+14. [Contact Information](#contact-information)
+15. [Screenshots](#screenshots)
+
+---
+
+### Technologies Used
+
+- **Backend**: Node.js, Express.js, Python
+- **Database**: MongoDB
+- **Authentication**: Bcrypt.js, Express-session
+- **Scheduling**: Node-schedule, Twilio
+- **Frontend**: HTML, CSS, JavaScript
+- **APIs**: Twilio for SMS, Google APIs for meeting links
+- **SSL**: Custom SSL Certificates (cert.pem, key.pem)
+- **Others**: dotenv for environment variables, fs, readline-sync for utility operations
+
+---
+
+### Introduction
+
+Welcome to the Smart Health Assistant project! This innovative platform is designed to enhance personal well-being by offering a comprehensive set of tools to make health management more accessible and efficient. Whether you're managing medication schedules, seeking immediate assistance during an emergency, or staying connected with friends and family, this project has you covered.
+
+---
+
+### Key Features
+
+1. **SOS Emergency Alerts**:
+   - A voice-activated SOS feature that enables users to send emergency alerts to pre-defined contacts with just a voice command. This ensures that help is always a voice away in critical situations.
+
+2. **Medication Reminders**:
+   - Never forget your medications! The system sends timely SMS reminders with details about dosage, time, and frequency. Users can easily add, edit, or remove medicines, ensuring they stay on track with their health routines.
+
+3. **Meet Link Generator**:
+   - Create secure meet links with a simple click. Whether you're connecting with friends, family, or healthcare professionals, the system generates unique links for seamless virtual meetings.
+
+4. **Personalized Health Recommendations**:
+   - A recommendation engine that provides tailored suggestions for diet, nutrition, workouts, and more. The system uses machine learning models to analyze user data and offer personalized health advice to improve well-being.
+
+5. **User Management**:
+   - An easy-to-use account registration and login system that ensures a personalized experience. Users can access their health data, track medications, and manage recommendations through their accounts.
+
+6. **Intuitive Dashboard**:
+   - A user-friendly dashboard that gives an overview of health data, upcoming medication reminders, and the status of active SOS requests. The interface is designed for easy navigation and quick access to key features.
+
+---
+
+### About the Project
+
+The **Smart Health Assistant** is a comprehensive web application designed to improve users' healthcare experiences. It integrates several features such as SOS alerts, medication reminders, meet link generation, and personalized health recommendations. Built with a focus on user well-being, it ensures timely medication alerts, emergency support, and personalized advice—all in one platform.
+
+The project is divided into multiple modules:
+
+- **Medication Management**: Users can add their medicines, set dosages and timings, and receive timely SMS reminders.
+- **SOS Alerts**: A voice-activated SOS feature that sends emergency alerts to ensure help is on the way in critical situations.
+- **Meet Links**: A feature for generating virtual meet links, allowing users to stay connected with healthcare providers or loved ones.
+- **Health Recommendations**: The system uses machine learning algorithms to recommend diet plans, workouts, and other health-related tips based on user data.
+
+This project is designed to be intuitive, scalable, and highly user-centric, making healthcare management more accessible for everyone.
+
+---
+
+### Workflow of the Project
+
+1. **User Registration & Login**:
+   - The user begins by creating an account, providing basic details such as name, email, and password.
+   - After successful registration, the user can log in to access their personalized dashboard.
+
+2. **Medication Management**:
+   - The user adds medicines through the **Medication Management** module by providing the medicine name, dosage, and the time for intake.
+   - This information is stored in a MongoDB database.
+   - The **Twilio API** is integrated to send SMS reminders at specified times, notifying users about upcoming doses.
+
+3. **SOS Emergency Alerts**:
+   - Users can trigger an **SOS emergency alert** by using a voice command (integrating with voice recognition).
+   - The application immediately sends notifications to pre-defined contacts or emergency numbers, ensuring timely help in critical moments.
+
+4. **Meet Link Generation**:
+   - Users can create secure meet links using the **Meet Link Generator** feature.
+   - The generated links can be shared with family, friends, or healthcare providers for virtual consultations or emergencies.
+
+5. **Health Recommendations**:
+   - The system uses machine learning models to analyze data and provide personalized recommendations in the following areas:
+     - Diet & Nutrition
+     - Fitness (Workouts)
+     - Symptoms & Precautions
+   - Users receive customized advice to enhance their overall health and wellness.
+
+6. **Dashboard Overview**:
+   - The user dashboard displays an overview of upcoming medications, active SOS requests, and health recommendations.
+   - It notifies users about pending medications, reminders, and health tips.
+   - The dashboard is designed to help users stay organized and on track with their health goals.
+
+7. **Data Storage & Management**:
+   - All user data is securely stored in a MongoDB database.
+   - **Mongoose** is used to interact with the database, making it easy to retrieve and modify user data such as medicines, health records, and user preferences.
+
+8. **Emergency Response Handling**:
+   - When an **SOS alert** is triggered, the backend processes the user’s request and sends emergency alerts via SMS or notifications to pre-configured contacts.
+   - This ensures immediate action, providing safety and peace of mind, especially in critical health situations.
+
+9. **Sending SMS Reminders via Twilio**:
+   - The **Twilio API** is integrated into the backend to send SMS reminders about medication and upcoming meetings.
+   - This ensures timely communication, helping users effectively manage their health routines.
+
+---
+Here is the README file with the provided content, excluding the comment lines:
+
+---
+
+## File Structure
+
+C:.
+|   .env
+|   .gitignore
+|   createMeetLink.js
+|   credentials.json
+|   google-auth.js
+|   makecall.js
+|   manifest.json
+|   package-lock.json
+|   package.json
+|   sendSMS.js
+|   server.js
+|   service-worker.js
+|   testtwillo.js
+|   token.json
+|   
++---image
+|   about-img.svg
+|   blog-1.jpg
+|   blog-2.jpg
+|   blog-3.jpg
+|   ...
+|   
++---models
+|   Medicine.js
+|   User.js
+|   
++---node_modules
+|   
++---public
+|       Dashboard.css
+|       Dashboard.html
+|       dashboard.js
+|       index.html
+|       medindex.html
+|       medscript.js
+|       medstyles.css
+|       script.js
+|       sosapp.js
+|       sosindex.html
+|       style.css
+|       virtualindex.html
+|   
++---Recommendation
+|   description.csv
+|   diets.csv
+|   main.py
+|   medications.csv
+|   precautions_df.csv
+|   recom.ipynb
+|   svc.pkl
+|   Symptom-severity.csv
+|   symptoms.py
+|   symtoms_df.csv
+|   Training.csv
+|   workout_df.csv
+|   |
+|   \---templates
+|           icon-medtech.png
+|           index.html
+|           style.css
+|   
++---ssl
+|   cert.pem
+|   key.pem
+
+## Prerequisites
+
+Before you can start using or contributing to the Smart Health Assistant project, you will need to set up a few things. This section covers the **software requirements** and **account setup**.
+
+---
+
+### Software Requirements
+
+#### 1. **Node.js and npm**
+Node.js is required to run the server and handle the backend functionality of the application.
+
+- **Node.js** is a JavaScript runtime used for the server-side logic.
+- **npm** (Node Package Manager) is used to manage the dependencies for the project.
+
+**Steps to Install Node.js and npm**:
+1. Go to the [Node.js official website](https://nodejs.org/en/download/).
+2. Download the **LTS version** for your operating system (Windows, macOS, or Linux).
+3. Run the installer and follow the on-screen instructions to install both **Node.js** and **npm**.
+4. Once the installation is complete, verify the installation by running the following commands in your terminal or command prompt:
+   ```bash
+   node -v
+   npm -v
+   ```
+
+---
+
+#### 2. **MongoDB**
+MongoDB is the NoSQL database used to store data such as user profiles, medicines, recommendations, and more.
+
+**Steps to Install MongoDB**:
+1. Go to the [MongoDB official download page](https://www.mongodb.com/try/download/community).
+2. Choose the correct version for your operating system and download the installer.
+3. Run the installer and follow the installation steps.
+4. After installation, start the MongoDB service by running the following command in your terminal:
+   ```bash
+   mongod
+   ```
+
+You can also use [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for a cloud-based MongoDB instance.
+
+---
+
+#### 3. **Python**
+Python is used for running some of the machine learning models in the recommendation system.
+
+**Steps to Install Python**:
+1. Visit the [Python official website](https://www.python.org/downloads/).
+2. Download the latest version of Python (preferably Python 3.x).
+3. Run the installer and ensure that the option **Add Python to PATH** is checked before clicking **Install Now**.
+4. After installation, verify the installation by running:
+   ```bash
+   python --version
+   ```
+
+---
+
+#### 4. **Visual Studio Code (VS Code)**
+VS Code is the recommended code editor for this project.
+
+**Steps to Install VS Code**:
+1. Go to the [VS Code download page](https://code.visualstudio.com/Download).
+2. Choose the version for your operating system (Windows, macOS, or Linux).
+3. Run the installer and follow the setup instructions.
+
+---
+
+#### 5. **Twilio Account**
+Twilio is used for sending SMS reminders and handling emergency SOS alerts.
+
+**Steps to Set Up a Twilio Account**:
+1. Visit the [Twilio website](https://www.twilio.com/).
+2. Sign up or log in to your Twilio account.
+3. Obtain your **Account SID** and **Auth Token**.
+4. Purchase a Twilio phone number.
+5. Save the **Account SID**, **Auth Token**, and **Twilio Phone Number** in a secure place.
+
+---
+
+#### 6. **Google Cloud Console (for Google Meet Link Generation)**
+Google Cloud services are used to generate meet links.
+
+**Steps to Set Up Google API Credentials**:
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Create a new project.
+3. Enable the **Google Meet API**.
+4. Create **OAuth 2.0 credentials** and download the `credentials.json` file.
+5. Store the `credentials.json` file in your project folder.
+
+---
+
+### Accounts Setup
+
+#### 1. **Setting Up Twilio**:
+1. Create a `.env` file in the root directory and add the following:
+   ```bash
+   TWILIO_ACCOUNT_SID=your_account_sid
+   TWILIO_AUTH_TOKEN=your_auth_token
+   TWILIO_PHONE_NUMBER=your_twilio_phone_number
+   ```
+
+#### 2. **Setting Up Google API**:
+1. Download the `credentials.json` from Google Cloud and place it in the project root directory.
+
+---
+
+### Installing Dependencies
+
+1. **Install Node.js dependencies**:
+   ```bash
+   npm install
+   ```
+
+2. **Install Python dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+### Setting Up .env File
+
+Create a `.env` file in the root directory and add the Twilio credentials:
+
+```bash
+TWILIO_ACCOUNT_SID=your_account_sid
+TWILIO_AUTH_TOKEN=your_auth_token
+TWILIO_PHONE_NUMBER=your_twilio_phone_number
+```
+
+---
+
+### Node.js Installations (using npm)
+
+In your terminal (inside the project directory), run the following command to install the required Node.js dependencies:
+
+```bash
+npm install express mongoose bcryptjs express-session body-parser twilio node-schedule dotenv https fs readline-sync
+```
+
+This will install the following dependencies:
+
+- **express**: A web framework for Node.js to handle routing and server-side logic.
+- **mongoose**: An ODM (Object Data Modeling) library for MongoDB, used to interact with the MongoDB database.
+- **bcryptjs**: A library for hashing passwords securely.
+- **express-session**: Middleware for handling user sessions.
+- **body-parser**: Middleware to parse incoming request bodies.
+- **twilio**: The Twilio SDK to interact with Twilio's SMS and other communication services.
+- **node-schedule**: A job scheduler for Node.js to run tasks at specific intervals.
+- **dotenv**: A module for loading environment variables from a `.env` file.
+- **https**: Built-in module to create secure HTTPS servers.
+- **fs**: Built-in module to handle file system operations.
+- **readline-sync**: A simple library for synchronously reading user input from the command line.
+
+---
+
+### Python Installations (using pip)
+
+For the Python part of your project, you’ll need to install the following dependencies:
+
+In your terminal (ensure Python and pip are installed):
+
+#### 1. Install pip on Windows
+
+If pip is not installed, follow these steps:
+
+- **Check if pip is already installed**:
+    - Open Command Prompt (press `Win + R`, type `cmd`, and press Enter).
+    - Type the following command to check if pip is already installed:
+
+    ```bash
+    pip --version
+    ```
+
+    If pip is installed, you'll see the version number (e.g., `pip 21.0.1`).
+
+- **Install pip (if it's missing)**:
+    - Ensure Python is installed: Check if Python is installed by typing:
+
+    ```bash
+    python --version
+    ```
+
+    If Python is installed, it will show the version number.
+    - Download `get-pip.py` from the official pip installation page.
+    - Save the file as `get-pip.py` to a directory on your computer.
+    - Open Command Prompt and navigate to the directory where `get-pip.py` is saved.
+    - Run the following command to install pip:
+
+    ```bash
+    python get-pip.py
+    ```
+
+    After installation, verify it by typing:
+
+    ```bash
+    pip --version
+    ```
+
+#### 2. Install Python Dependencies
+
+Now, install the required Python libraries by running:
+
+```bash
+pip install flask pandas numpy pickle5 twilio schedule
+```
+
+These dependencies are needed for the following functionality:
+
+- **flask**: A lightweight web framework for building the recommendation system and handling HTTP requests.
+- **pandas**: A data manipulation and analysis library, useful for processing data related to recommendations and user information.
+- **numpy**: A package for scientific computing, useful for working with large datasets and mathematical operations.
+- **pickle5**: A library for serializing and deserializing Python objects, typically used for saving and loading machine learning models.
+- **twilio**: The Twilio SDK to send SMS reminders and other notifications.
+- **schedule**: A Python library to run tasks at specific intervals (similar to node-schedule).
+
+--- 
+
+### **Steps to Create SSL Certificate and Key**
+
+1. **Install OpenSSL**:  
+   If you don't have OpenSSL installed, download it from [here](https://www.openssl.org/).
+
+2. **Generate Your SSL Certificate and Key**:  
+   Open your terminal or command prompt and run the following commands:
+
+   - **Create the private key (`key.pem`)**:
+
+   ```bash
+   openssl genpkey -algorithm RSA -out key.pem -pkeyopt rsa_keygen_bits:2048
+   ```
+
+   - **Create the certificate signing request (CSR)**:
+
+   ```bash
+   openssl req -new -key key.pem -out csr.pem
+   ```
+
+   - **Create the certificate (`cert.pem`)**:
+
+   ```bash
+   openssl x509 -req -in csr.pem -signkey key.pem -out cert.pem
+   ```
+
+   You will now have two files:
+   - `key.pem` (private key)
+   - `cert.pem` (SSL certificate)
+
+---
+
+### **How to Find Your IP Address**
+
+- **For Windows**:
+   1. Open the Command Prompt and type:
+   
+   ```bash
+   ipconfig
+   ```
+   
+   2. Look for the **IPv4 Address** under your active connection (e.g., `192.168.1.x`).
+
+- **For macOS/Linux**:
+   1. Open the Terminal and type:
+   
+   ```bash
+   ifconfig
+   ```
+   
+   2. Look for the **inet** entry (e.g., `192.168.x.x`).
+
+- **For Public IP Address**:
+   Visit [WhatIsMyIP.com](https://www.whatismyip.com/) to find your public IP address.
+
+---
+
+### **Steps to Replace SSL Certificates and Update IP Address**
+
+1. **Replace SSL Certificates (`cert.pem` and `key.pem`)**:
+   - Replace the old `cert.pem` and `key.pem` files with your newly generated SSL certificate files in the project directory.
+
+2. **Update the IP Address in `server.js`**:
+   - In `server.js`, find this line:
+   
+   ```javascript
+   server.listen(3000, '198.162.0.102', () => {
+   ```
+   
+   - Replace `'198.162.0.102'` with your actual IP address (e.g., `'192.168.1.x'`).
+   - Save and restart the server with:
+
+   ```bash
+   node server.js
+   ```
+
+3. **Update the IP Address in `main.py`**:
+   - In `main.py`, find this line:
+   
+   ```python
+   app.run(host='127.0.0.1', port=5000, ssl_context=('cert.pem', 'key.pem'))
+   ```
+   
+   - Replace `'127.0.0.1'` with your IP address (e.g., `'192.168.1.x'`).
+   - Save and run the server with:
+
+   ```bash
+   python main.py
+   ```
+
+4. **Update the IP Address in `dashboard.html`**:
+   - In `dashboard.html`, find URLs like:
+
+   ```html
+   <a href="https://198.162.0.102:3000">Visit Dashboard</a>
+   ```
+
+   - Replace `'198.162.0.102:3000'` with your IP address.
+   - Save the changes.
+
+---
+
+### Running the Project
+
+1. Open the project folder in **VS Code**.
+2. Open a new terminal window in VS Code.
+3. Start the server by running:
+   ```bash
+   node server.js
+   ```
+4.This will start the server, and the application will automatically open with the modified address like https:192.168.0.102:5000 in browser. You can also access the same link the mobile with same internet connection.
+
+---
+### Screenshots
+
+
+---
+
+### Future Scope
+The project has the potential for future enhancements and additional features. Some possible improvements include:
+
+Integration with Wearable Devices: Integrate with health tracking devices to automate medication reminders based on the user's physical conditions.
+AI-based Recommendations: Enhance the diet and exercise recommendations using machine learning models for personalized suggestions.
+Multi-language Support: Add support for multiple languages to cater to a wider audience.
+Real-time Video Calls: Integrate video calling functionality to enable real-time communication with doctors or loved ones.
+Contact Information
+For any questions or support related to this project, feel free to contact us:
+
+Project Author: Ishwarya
+Email: [ishwaryasuresh2004 @gmail.com]
+GitHub: [your-github-profile]
+LinkedIn: [linkedin.com/in/ishwarya-suresh-096a9a246]
+Feel free to open an issue or reach out if you encounter any bugs or want to contribute to the project!
+
+
+
+
