@@ -494,6 +494,11 @@ These dependencies are needed for the following functionality:
 4.This will start the server, and the application will automatically open with the modified address like https:192.168.0.102:5000 in browser. You can also access the same link the mobile with same internet connection.
 
 ---
+### Prototype video
+
+https://github.com/user-attachments/assets/f2e68bf1-efcb-4412-9731-3080adea1eb1
+
+---
 ### Screenshots
 
 ![Screenshot 2024-12-24 185347](https://github.com/user-attachments/assets/00b90417-3cf9-42b8-8efa-141444d534ea)
